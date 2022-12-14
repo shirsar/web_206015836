@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel='stylesheet' href='../static/css.css'> 
+    <script defer src="../static/java_script.js"> </script>
+
+</head>
+<body class="body2">
+    <div class="mainGrid">
+      <header>
+        <div class="container">
+          <div class="parkingNav">
+            <h1 class="logo">My Clinic</h1>
+            <nav>
+              <ul>
+                <li><a href="Main.html">Home</a></li>
+                <li><a href="Search a doctor.html">Doctor Search</a></li>
+                <li><a href="log in.html">Log in</a></li>
+                <li><a href="sign up.html">Sign up</a></li>
+                <li><a href="contact us.html">Contact us</a></li>
+
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <div class="tohen">
+                <div class="form_container">
+                  <div class="title_container">
+                    <h2>Sign Up To The System</h2>
+                  </div>
+                  <div class="row clearfix">
+                      <form name="my-form" onsubmit="return ValidationFunction()">
+                        <div > <span><i aria-hidden="true" class="fa fa-envelope"></i></span>
+                          <input class="input_field" type="email" id="email" placeholder="Email" required /> 
+                        </div>
+                        <br>
+                        <div > <span><i aria-hidden="true" class="fa fa-lock"></i></span>
+                          <input class="input_field" type="password" id="password" placeholder="Password" required />
+                        </div>
+                        <br>
+                        <div > <span><i aria-hidden="true" class="fa fa-lock"></i></span>
+                          <input class="input_field" type="password" id="repassword" placeholder="Type Password Again" required />
+                        </div>
+                        <br>
+                        <div > <span><i aria-hidden="true" class="fa fa-user"></i></span>
+                              <input class="input_field" type="text" id="fname" placeholder="First Name" required/>
+                        </div>
+                        <br>
+                        <div > <span><i aria-hidden="true" class="fa fa-user"></i></span>
+                              <input class="input_field" type="text" id="lname" placeholder="Last Name" required />
+                        </div>
+                        <br>
+                        <div > <span><i aria-hidden="true" class="fa fa-user"></i></span>
+                          <input class="input_field" type="age" id="age" placeholder="Age" required />
+                        </div>
+                        <br>
+                        <div class="input_field radio_option" >
+                            <input type="radio" name="radiogroup1" id="female" placeholder="radiogroup1" required>
+                            <label for="rd1">Female</label>
+                            <input type="radio" name="radiogroup1" id="male" placeholder="radiogroup1" required>
+                            <label for="rd2">Male</label>
+                            <input type="radio" name="radiogroup1" id="other" placeholder="radiogroup1" required>
+                            <label for="rd3">Other</label>
+                      
+                        </div>
+                        <br>
+                    
+                        <input class="BTNS" type="submit" value="Register" onclick="MessagePop()"/>
+                      </form>
+                  </div>
+                  
+        </div>
+    </div>
+    </body>
+</html>

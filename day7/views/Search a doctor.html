@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel='stylesheet' href='../static/css.css'> 
+    <script defer src="../static/java_script.js"> </script>
+</head>
+<body class="body2">
+    <div class="BrowserDiv">
+      <header>
+        <div class="container">
+          <div class="TBNav">
+              <h1 class="logo">My Clinic</h1>
+              <nav>
+                <ul>
+                    <li><a href="Main.html">Home</a></li>
+                    <li><a href="Search a doctor.html">Doctor Search</a></li>
+                    <li><a href="log in.html">Log in</a></li>
+                    <li><a href="sign up.html">Sign up</a></li>
+                    <li><a href="contact us.html">Contact us</a></li>
+
+                </ul>
+              </nav>
+          </div>
+        </div>
+      </header>
+        <div class="tohen">
+            <div class="title_container">
+              <h2>Search A Doctor</h2>
+            </div>
+            <div>
+              <label for="Health Organization">Health Organization</label> <br>
+              <select name="Health Organization" class="input_field">
+                <option value="All">All</option>
+                <option value="Maccabi">Macabi</option>
+                <option value="Clalit">Clalit</option>
+                <option value="Meohedet">Meohedet</option>
+              </select>
+            </div>
+            <br>
+            <div>
+                <label for="Location">Location</label> <br>
+                <select name="Location" class="input_field">
+                  <option value="All">All</option>
+                  <option value="Haifa">Haifa</option>
+                  <option value="Tel-Aviv">Tel Aviv</option>
+                  <option value="Beer-Sheva">Beer Sheva</option>
+                  <option value="Jerusalem">Jerusalem</option>
+                  <option value="Akko">Akko</option>
+                </select>
+                <button class="BTN" onclick="LocationNavig()">get location</button>
+
+            </div> 
+            <br>
+            <div>
+                <label for="Expertise">Expertise</label> <br>
+                <select name="Expertise" class="input_field">
+                  <option value="All">All</option>
+                  <option value="Dermatology">Dermatology</option>
+                  <option value="Ophthalmology">Ophthalmology</option>
+                  <option value="Dentistry">Dentistry</option>
+                  <option value="Orthopedic">Orthopedic</option>
+                  <option value="Cardiology">Cardiology</option>
+                </select>
+    
+            </div> 
+            <br>
+            <label for="Gender Of Doctor">Gender Of Doctor</label> <br>
+            <div class="input_field radio_option">
+              <input type="radio" name="radiogroup1" id="female" placeholder="radiogroup1" required>
+              <label for="rd1">Female</label>
+              <input type="radio" name="radiogroup1" id="male" placeholder="radiogroup1" required>
+              <label for="rd2">Male</label>
+  
+            </div>
+            <div>
+            </div>
+        </div>
+    
+        <br>
+        <div>
+        </div>
+        
+           
+          <button class="BTNS" id="find-doctor" onclick="ShowTable()">Find My Doctor</button>
+          <button class="BTN" style="display: none;" id="whatYouWantToHide" onclick="Reset()">Reset Search</button>
+
+            </div>
+        </div>
+        <div class="Table">
+            <table id="my-table" style="display: none;" >
+                <tr>
+                  <th>Name</th>
+                  <th>Expertise</th>
+                  <th>Address</th>
+                  <th>City</th>
+                  <th>Phone Number</th>      
+                  <th>Gender</th>
+                  <th>Health Organization</th>     
+                </tr>
+                <tr>
+                  <td>Doctor Eli Levi</td>
+                  <td>Dermatology</td>
+                  <td>Hazal 14</td>
+                  <td>Beer-Sheva</td>
+                  <td>08-8333466</td>
+                  <td>Male</td>
+                  <td>Macabi</td>
+                </tr>
+                <tr>
+                  <td>Doctor Shiran Cohen</td>
+                  <td>Ophthalmology</td>
+                  <td>Avraham Avinu 2</td>
+                  <td>Haifa</td>
+                  <td>08-8136533</td>
+                  <td>Female</td>
+                  <td>Clalit</td>
+                </tr>
+                <tr>
+                  <td>Doctor Yarden Ben</td>
+                  <td>Cardiology</td>
+                  <td>Siterman Michael 12</td>
+                  <td>Tel-Aviv</td>
+                  <td>03-8364933</td>
+                  <td>Male</td>
+                  <td>Meohedet</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
