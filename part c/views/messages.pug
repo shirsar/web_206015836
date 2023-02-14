@@ -1,0 +1,18 @@
+extends layout 
+block content
+ .tohen
+      h2 #{var1}   
+      br
+      if messages
+        table.Table
+          tr
+              th Message ID
+              th Content 
+              th Cusomer ID  
+          each n in messages
+            tr 
+                td= n.MessageID   
+                td= n.Content   
+                td= n.CustomerID
+        span
+            a.BTN(href='Profile') Back to your profile 

@@ -1,0 +1,19 @@
+extends layout 
+block content
+  div(class="profileBtn")
+    a(href='/messages') 
+      img(src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCWekRMfQr86qHYtgtugNnoVPHamDJsakCg9Jm_sarRw&s' alt='alternatetext' style='width: 50px;height: 50px; margin-top: 1%;')
+      button.BTN1(type='button' value='MY MESSAGES') MY MESSAGES
+    br 
+    br
+    a(href='/updatePassword') 
+      img(src='https://static.thenounproject.com/png/3309848-200.png' alt='alternatetext' style='width: 50px;height: 50px; margin-top: 1%;')
+      button.BTN1(type='button' value='UPDATE PASSWORD') UPDATE PASSWORD
+
+    br
+    br
+    form(action="/profile" method="post") 
+      img(src='https://cdn-icons-png.flaticon.com/512/3405/3405244.png' alt='alternatetext' style='width: 50px;height: 50px; margin-top: 1%;')
+      button.BTN1(type='submit' value='DELETE MY ACCOUNT' onclick='return makeSure();') DELETE MY ACCOUNT
+
+    
