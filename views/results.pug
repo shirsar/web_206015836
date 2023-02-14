@@ -1,0 +1,28 @@
+extends layout 
+block content
+ .tohen
+      h2 #{var1}   
+      br
+      if doctors
+        table.Table
+          tr
+              th Doctors Id 
+              th Doctor Name 
+              th Expertise 
+              th Health Organization 
+              th Gender Of Doctor 
+              th Phone
+              th City
+              th Address
+          each n in doctors
+            tr 
+                td= n.DoctorID   
+                td= n.Doctor_Name   
+                td= n.Expertise  
+                td= n.Health_Organization   
+                td= n.Gender_Of_Doctor 
+                td= n.Phone 
+                td= n.City 
+                td= n.Address 
+        span
+            a.BTN(href='SearchAdoctor') Back to Search

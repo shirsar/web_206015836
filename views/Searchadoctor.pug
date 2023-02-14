@@ -1,0 +1,78 @@
+extends layout 
+block content
+  .tohen
+    .title_container
+      h2 Search A Doctor
+    form.searchadoctor(action='/SearchAdoctor' , method = "post")
+      div
+        label(for='Health Organization') Health Organization
+        br
+        select.input_field(name='Health_Organization')
+          option(value='All') All
+          option(value='Maccabi') Macabi
+          option(value='Clalit') Clalit
+          option(value='Meohedet') Meohedet
+      br
+      div
+        label(for='Location') Location
+        br
+        select.input_field(name='Location')
+          option(value='All') All
+          option(value='Haifa') Haifa
+          option(value='Tel-Aviv') Tel Aviv
+          option(value='Beer-Sheva') Beer Sheva
+          option(value='Jerusalem') Jerusalem
+          option(value='Akko') Akko
+        button.BTN(type='button' onclick='LocationNavig()') Get location
+
+      br
+      div
+        label(for='Expertise') Expertise
+        br
+        select.input_field(name='Expertise')
+          option(value='All') All
+          option(value='Dermatology') Dermatology
+          option(value='Ophthalmology') Ophthalmology
+          option(value='Dentistry') Dentistry
+          option(value='Orthopedic') Orthopedic
+          option(value='Cardiology') Cardiology
+      br
+      label(for='Gender Of Doctor') Gender Of Doctor
+      br
+      div
+        select.input_field(name='gender')
+          option(value='All') All
+          option(value='Male') Male
+          option(value='Female') Female
+      div
+      br
+      div
+      button#find-doctor.BTNS(type='submit' value='Find My Doctor') Find My Doctor
+      button#whatYouWantToHide.BTN(style='display: none;' onclick='Reset()') Reset Search
+      br
+      h2 #{var1}   
+      br
+      if doctors
+        table.Table
+          tr
+              th Doctors Id 
+              th Doctor Name 
+              th Expertise 
+              th Health Organization 
+              th Gender Of Doctor 
+              th Phone
+              th City
+              th Address
+          each n in doctors
+            tr 
+                td= n.DoctorID   
+                td= n.Doctor_Name   
+                td= n.Expertise  
+                td= n.Health_Organization   
+                td= n.Gender_Of_Doctor 
+                td= n.Phone 
+                td= n.City 
+                td= n.Address 
+
+               
+    
