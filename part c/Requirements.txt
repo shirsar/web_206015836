@@ -1,0 +1,34 @@
+1. pug, mysql2, body-parser, csv, csvtojson, express
+2. 
+http://localhost:8080/CreateCustomersTablehttp://localhost:8080/CreateDoctorsTablehttp://localhost:8080/CreateMessagesTablehttp://localhost:8080/InsertCustomerDatahttp://localhost:8080/InsertMessagesDatahttp://localhost:8080/InsertDoctorDatahttp://localhost:8080/DropCustomersTablehttp://localhost:8080/DropDoctorsTablehttp://localhost:8080/DropMessegesTablehttp://localhost:8080/ShowCustomersTablehttp://localhost:8080/ShowDoctorsTablehttp://localhost:8080/ShowMessegesTable
+3.
+-- DROP table customers; 
+CREATE TABLE IF NOT EXISTS CUSTOMERS (
+CustomerID			int(11)			NOT NULL PRIMARY KEY AUTO_INCREMENT,
+Email 				varchar(255) 	NOT NULL,
+Password1			varchar(255) 	NOT NULL,
+First_Name			varchar(255) 	NOT NULL,
+Last_Name			varchar(255) 	NOT NULL,
+Age					tinyint			NOT NULL,
+Gender				varchar(255)	NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- DROP TABLE DOCTORS;
+CREATE TABLE IF NOT EXISTS DOCTORS (
+DoctorID	 			int(11) 		NOT NULL PRIMARY KEY AUTO_INCREMENT,
+Doctor_Name 			varchar(255) 	NOT NULL,
+Expertise 				varchar(255) 	NOT NULL,
+Health_Organization		varchar(255) 	NOT NULL,
+Gender_Of_Doctor 		varchar(255) 	NOT NULL,
+Phone					varchar(15) 	NOT NULL,
+City					varchar(255) 	NOT NULL,
+Address					varchar(255) 	NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+ -- DROP TABLE MESSEGES;
+CREATE TABLE IF NOT EXISTS MESSEGES (
+MessageID 			int(11) 		NOT NULL PRIMARY KEY AUTO_INCREMENT,
+Content				text(255) 	NOT NULL,
+CustomerID			int(11)		NOT NULL,
+FOREIGN KEY (CustomerID) REFERENCES CUSTOMERS(CustomerID)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
